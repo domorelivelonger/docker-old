@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  squid:
+    build: .
+#    image: domorelivelonger/squid
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
+        reservations:
+          cpus: '0.25'
+          memory: 20M
+    container_name: squid
+    ports:
+      - "3128:3128"
+    volumes:
+#      - ./cache/:/var/spool/squid/
+      - ./squid.conf:/etc/squid/squid.conf
+      - ./squid_passwd:/etc/squid/squid_passwd
+    restart: always
