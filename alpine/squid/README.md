@@ -5,13 +5,13 @@ Minimal docker Ubuntu image with [Squid] that only proxies authenticated request
 ### Usage
 ```
 git clone https://github.com/domorelivelonger/squid-alpine.git
-cd squid-docker-alpine
+cd squid-alpine
 docker-compose up -d
 ```
 or with Docker build
 ```
 git clone https://github.com/domorelivelonger/squid-alpine.git
-cd squid-docker-alpine
+cd squid-alpine
 docker build .
 docker images
 docker run --name squid -d --restart=always   --publish 3128:5128   \
