@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-LABEL maintainer="0dataexpert0@gmail.com"
+LABEL maintainer="domorelivelonger@gmail.com"
 #RUN echo -e "http://nl.alpinelinux.org/alpine/v3.5/main\nhttp://nl.alpinelinux.org/alpine/v3.5/community" > /etc/apk/repositories
 RUN apk --update --no-cache add pptpd ppp iptables && \
     rm -rf /var/cache/apk/* && \

@@ -10,10 +10,10 @@ services:
           cpus: '0.50'
           memory: 150M
 
-    container_name: pptpd1
+    container_name: pptpd
     restart: always
     build: .
-    image: pptpd1
+    image: pptpd
     volumes:
       - ./chap-secrets:/etc/ppp/chap-secrets
     network_mode: host
