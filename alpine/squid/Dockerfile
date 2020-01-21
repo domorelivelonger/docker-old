@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Web Xdata "docker@webxdata.com"
+LABEL maintainer="domorelivelonger@gmail.com"
 
 RUN apk add --no-cache squid apache2-utils
 RUN set -x \
