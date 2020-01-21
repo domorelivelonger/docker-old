@@ -7,10 +7,10 @@ services:
       resources:
         limits:
           cpus: '0.50'
-          memory: 50M
+          memory: 150M
         reservations:
-          cpus: '0.25'
-          memory: 20M
+          cpus: '0.50'
+          memory: 150M
     container_name: squid
     ports:
       - "3128:3128"

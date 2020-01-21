@@ -1,0 +1,22 @@
+version: '3'
+services:
+  pptpd:
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 150M
+        reservations:
+          cpus: '0.50'
+          memory: 150M
+
+    container_name: pptpd1
+    restart: always
+    build: .
+    image: pptpd1
+    volumes:
+      - ./chap-secrets:/etc/ppp/chap-secrets
+    network_mode: host
+    ports:
+      - 1723:1723
+    privileged: true
